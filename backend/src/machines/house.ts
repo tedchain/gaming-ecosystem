@@ -8,7 +8,7 @@ export default class HouseMachine extends Machine {
     this.status = "House"
     this.custom["happiness"] = 2
 
-    // run every 5 seconds
+    // run every 5 seconds.
     this.intervals.push(setInterval(()=>{
       if("Energy" in this.has && this.has["Energy"]<2){
         this.needs["Energy"] = 2 - this.has["Energy"]
